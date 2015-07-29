@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using InterviewTest1.Models;
+using InterviewTest3.Models;
 
-namespace InterviewTest1
+namespace InterviewTest3
 {
     public class Repo
     {

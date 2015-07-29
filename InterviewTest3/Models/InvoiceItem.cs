@@ -1,4 +1,4 @@
-﻿namespace InterviewTest1.Models
+﻿namespace InterviewTest3.Models
 {
     public class InvoiceItem
     {
@@ -54,16 +54,20 @@
             // Used in calculating Total
             decimal calculateDiscount = (decimal)Discount / 100;
 
+            SubTotal = (SubTotal - (SubTotal * calculateDiscount));
+
             // Calculating Total depending on if item is Taxable or not
             if (Taxable.Equals(true))
             {
-                Total = (SubTotal - (SubTotal * calculateDiscount));
+                Total = SubTotal;
                 Total = (Total + (Total * TaxRate));
             } else {
-                Total = (SubTotal - (SubTotal * calculateDiscount));
+                Total = SubTotal;
             }
 
-            return string.Format("{0}Quantity: {1:00}\tPer Unit: $ {2:#,0.00}{5}\tTax Rate: {7:00}%\tDiscount: {3:00}%\nSubTotal: $ {4:#,0.00}\nTotal: $ {6:#,0.00}\n",
+            InvoiceTotals.invoiceSubTotal = InvoiceTotals.invoiceSubTotal + SubTotal;
+
+            return string.Format("{0}Quantity: {1:00}\tPer Unit: ${2:#,0.00}{5}\tTax Rate: {7:00}%\tDiscount: {3:00}%\nSubTotal: ${4:#,0.00}\nTotal: ${6:#,0.00}\n",
                                  LineText.PadRight(20),
                                  Quantity,
                                  UnitPrice,

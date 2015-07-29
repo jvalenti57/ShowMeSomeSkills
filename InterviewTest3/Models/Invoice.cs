@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace InterviewTest1.Models
+namespace InterviewTest3.Models
 {
     public class Invoice
     {

@@ -7,7 +7,7 @@
     <ProjectGuid>{C95A4B24-6CEE-4B49-AF29-C456C98291CF}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>InterviewTest1</RootNamespace>
+    <RootNamespace>InterviewTest2</RootNamespace>
     <AssemblyName>InterviewTest1</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
